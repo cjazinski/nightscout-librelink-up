@@ -1,0 +1,57 @@
+{
+  "name": "nightscout-librelink-up",
+  "version": "2.4.1",
+  "description": "Script written in TypeScript that uploads CGM readings from LibreLink Up to Nightscout",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "npx ts-node --transpile-only src/index.ts",
+    "start-dev": "npx ts-node src/index.ts",
+    "start-heroku": "node dist/index.js",
+    "lint": "npx eslint . --fix",
+    "test": "jest --coverage --forceExit",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timoschlueter/nightscout-librelink-up.git"
+  },
+  "keywords": [
+    "nightscout",
+    "cgm",
+    "diabetes",
+    "blood",
+    "sugar",
+    "freestyle",
+    "libre",
+    "librelink",
+    "up",
+    "uploader"
+  ],
+  "author": "Timo Schlueter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timoschlueter/nightscout-librelink-up/issues"
+  },
+  "homepage": "https://github.com/timoschlueter/nightscout-librelink-up#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "axios-mock-adapter": "^1.21.4",
+    "dotenv": "^16.3.1",
+    "node-cron": "3.0.2",
+    "winston": "^3.9.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^2.0.1",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.2.5",
+    "@types/node-cron": "^3.0.7",
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "@typescript-eslint/parser": "^5.59.9",
+    "eslint": "^8.42.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
+  }
+}
